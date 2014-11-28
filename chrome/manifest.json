@@ -1,0 +1,9 @@
+{
+  "manifest_version": 2,
+  "name": "LinkuKuriinaa",
+  "version": "0.1",
+  "description": "Clean the links from redirects hell",
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
