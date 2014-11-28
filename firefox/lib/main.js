@@ -1,7 +1,7 @@
+var data = require("sdk/self").data;
 var pageMod = require("sdk/page-mod");
 
 pageMod.PageMod({
-  include: "*",
-  contentScript: 'document.body.innerHTML = ' +
-                 ' "<h1>Page matches ruleset</h1>";'
+  include: /.*google.*/,
+  contentScriptFile: [data.url("modify.js")]
 });
