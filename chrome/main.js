@@ -1,25 +1,12 @@
 /* jshint asi:true */
 
-console.log("リンククリーナー ready!")
+// Taken from http://stackoverflow.com/a/4854189
 
-window.RinkuKuriinaa = (function rinkuMain(){
-  var RinkuKuriinaa = {}
+function injectJs(link) {
+  var scr = document.createElement("script")
+  scr.type = "text/javascript"
+  scr.src = link
+  ;(document.head || document.body || document.documentElement).appendChild(scr)
+}
 
-  RinkuKuriinaa.cleanLink = function (link) {
-    link.removeAttribute("onmousedown")
-    link.onmousedown = undefined
-  }
-
-  RinkuKuriinaa.cleanAllLinks = function (base) {
-    var links = document.querySelectorAll(base)
-    for (var i=0; i < links.length; i++) {
-      RinkuKuriinaa.cleanLink(links[i])
-    }
-  }
-
-  return RinkuKuriinaa
-})()
-
-setTimeout(function () {
-  window.RinkuKuriinaa.cleanAllLinks('#res a')
-}, 5000)
+injectJs(chrome.extension.getURL("rikukuriinaa.js"))

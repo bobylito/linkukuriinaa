@@ -389,5 +389,8 @@
     ],
     "js": ["main.js"],
     "all_frames": true
-  }]
+  }],
+  "web_accessible_resources": [
+    "rikukuriinaa.js"
+  ]
 }
