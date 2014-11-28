@@ -5,5 +5,11 @@
   "description": "Clean the links from redirects hell",
   "browser_action": {
     "default_icon": "icon.png"
-  }
+  },
+  "permissions": ["http://*.google.com/", "https://*.google.com/"],
+  "content_scripts": [{
+    "matches": ["http://*.google.com/", "https://*.google.com/"],
+    "js": ["main.js"],
+    "all_frames": true
+  }]
 }
