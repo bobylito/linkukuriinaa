@@ -1,17 +1,7 @@
-var buttons = require('sdk/ui/button/action');
-var tabs = require("sdk/tabs");
+var pageMod = require("sdk/page-mod");
 
-var button = buttons.ActionButton({
-	id: "mozilla-link",
-	label: "Visit Mozilla",
-	icon: {
-		"16": "./icon-16.png",
-		"32": "./icon-32.png",
-		"64": "./icon-64.png"
-	},
-	onClick: handleClick
+pageMod.PageMod({
+  include: "*",
+  contentScript: 'document.body.innerHTML = ' +
+                 ' "<h1>Page matches ruleset</h1>";'
 });
-
-function handleClick(state) {
-	tabs.open("https://www.mozilla.org/");
-}
