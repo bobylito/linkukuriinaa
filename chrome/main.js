@@ -2,7 +2,7 @@
 
 console.log("リンククリーナー ready!")
 
-window.RinkuKuriinaa = (function (){
+window.RinkuKuriinaa = (function rinkuMain(){
   var RinkuKuriinaa = {}
 
   RinkuKuriinaa.cleanLink = function (link) {
@@ -18,7 +18,7 @@ window.RinkuKuriinaa = (function (){
   }
 
   return RinkuKuriinaa
-}())
+})()
 
 setTimeout(function () {
   window.RinkuKuriinaa.cleanAllLinks('#res a')
