@@ -2,22 +2,24 @@
 
 console.log("リンククリーナー ready!")
 
-window.LinkuKuriinaa = (function (){
-  var LinkuKuriinaa = {}
+window.RinkuKuriinaa = (function (){
+  var RinkuKuriinaa = {}
 
-  LinkuKuriinaa.cleanLink = function (link) {
+  RinkuKuriinaa.cleanLink = function (link) {
     link.removeAttribute("onmousedown")
     link.onmousedown = undefined
   }
 
-  LinkuKuriinaa.cleanAllLinks = function (base) {
+  RinkuKuriinaa.cleanAllLinks = function (base) {
     var links = document.querySelectorAll(base)
     for (var i=0; i < links.length; i++) {
-      LinkuKuriinaa.cleanLink(links[i])
+      RinkuKuriinaa.cleanLink(links[i])
     }
   }
 
-  return LinkuKuriinaa
+  return RinkuKuriinaa
 }())
 
-window.LinkuKuriinaa.cleanAllLinks('#res a')
+setTimeout(function () {
+  window.RinkuKuriinaa.cleanAllLinks('#res a')
+}, 5000)
