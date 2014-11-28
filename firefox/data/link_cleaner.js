@@ -4,7 +4,7 @@ window.setInterval(function() {
 
 function disableOnMouseDown() {
   console.log('disableOnMouseDown');
-  document.querySelectorAll('#rcnt a');
+  var links = document.querySelectorAll('#rcnt a');
   for (var i=0; i < links.length; i++) {
     links[i].onmousedown = undefined;
   }
