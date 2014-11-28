@@ -1,9 +1,9 @@
 {
-  "name": "firefox",
-  "title": "firefox",
+  "name": "linkukuriinaa",
+  "title": "LinkuKuriinaa",
   "id": "jid1-R0JqxIUcqC056g",
-  "description": "a basic add-on",
-  "author": "",
+  "description": "Clean the links from redirects hell",
+  "author": "Alexandre Stanislawski, Mayleen Richard-Lacouture, Etienne Vallette, Joris Guyonvarch",
   "license": "MPL 2.0",
   "version": "0.1"
 }
