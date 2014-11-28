@@ -17,7 +17,13 @@ window.RinkuKuriinaa = (function rinkuMain(){
     }
   }
 
+  RinkuKuriinaa.autoCleanAllLinks = function (base) {
+    setInterval(function () {
+      RinkuKuriinaa.cleanAllLinks(base)
+    }, 100)
+  }
+
   return RinkuKuriinaa
 })()
 
-RinkuKuriinaa.cleanAllLinks('#res a')
+RinkuKuriinaa.autoCleanAllLinks('#res a')
